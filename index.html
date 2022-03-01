@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>It's a Barrage of Fireworks!</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -26,13 +27,13 @@
             <input type="email" name="email" id="email" placeholder="JohnSmith@line.com" required>
 
             <label for="phone-num">Phone Number</label>
-            <input name="phone-num" id="phone-num" placeholder="123-456-7890" pattern="\d{3}-\d{3}-\d{4}">
+            <input name="phone-num" id="phone-num" placeholder="123-456-7890" pattern="\d{3}-\d{3}-\d{4}" title="Format must match ###-###-####">
 
             <label for="password">Password</label>
-            <input id="password" required>
+            <input type="password" id="password" pattern=".*[\W_]+.*[\d]+.*|.*[\d]+.*[\W_]+.*" title="Password must be at least 6 characters long, and must contain at least one special character(+=?./\*_) and one number(0-9)" required>
 
             <label for="confirm-password">Confirm Password</label>
-            <input id="confirm-password" name="password" required>
+            <input type="password" id="confirm-password" name="password" required>
             <button type="submit">Create Account!</button>
         </form>
         <p>Already have an account? <a href="#" target="_blank">Login</a> instead!</p>
