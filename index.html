@@ -10,33 +10,47 @@
 </head>
 
 <body>
-    <div>
-        <h1>Bullet Hell Classes</h1>
-        <p class="img-credit">Image copyright of XXX</p>
-    </div>
-    <div>
-        <h2 class="" form-info>Text detailing what the form is for. It's not a real form. This is just a mockup.</h2>
-        <form action="#" method="post">
-            <label for="first-name">First Name</label>
-            <input name="first-name" id="first-name" required>
+    <div class="parent-flex-container">
+        <div class="sidebar-container">
+            <h1>Bullet Hell Classes</h1>
+            <p class="img-credits">Image credit courtesy of XXX</p>
+        </div>
+        <div class="form-container">
+            <h2 class="" form-info>Text detailing what the form is for. It's not a real form. This is just a mockup.</h2>
+            <form action="#" method="post" id="form">
+                <div>
+                    <label for="first-name">First Name</label>
+                    <input name="first-name" id="first-name" required>
+                </div>
 
-            <label for="last-name">Last Name</label>
-            <input name="last-name" id="last-name" required>
+                <div>
+                    <label for="last-name">Last Name</label>
+                    <input name="last-name" id="last-name" required>
+                </div>
 
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" placeholder="JohnSmith@line.com" required>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="JohnSmith@line.com" required>
+                </div>
 
-            <label for="phone-num">Phone Number</label>
-            <input name="phone-num" id="phone-num" placeholder="123-456-7890" pattern="\d{3}-\d{3}-\d{4}" title="Format must match ###-###-####">
+                <div>
+                    <label for="phone-num">Phone Number</label>
+                    <input name="phone-num" id="phone-num" placeholder="123-456-7890" pattern="\d{3}-\d{3}-\d{4}" title="Format must match ###-###-####">
+                </div>
 
-            <label for="password">Password</label>
-            <input type="password" id="password" pattern=".*[\W_]+.*[\d]+.*|.*[\d]+.*[\W_]+.*" title="Password must be at least 6 characters long, and must contain at least one special character(+=?./\*_) and one number(0-9)" required>
+                <div>
+                    <label for="password">Password</label>
+                    <input type="password" id="password" pattern=".*[\W_]+.*[\d]+.*|.*[\d]+.*[\W_]+.*" title="Password must be at least 6 characters long, and must contain at least one special character(+=?./\*_) and one number(0-9)" required>
+                </div>
 
-            <label for="confirm-password">Confirm Password</label>
-            <input type="password" id="confirm-password" name="password" required>
-            <button type="submit">Create Account!</button>
-        </form>
-        <p>Already have an account? <a href="#" target="_blank">Login</a> instead!</p>
+                <div>
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" name="password" required>
+                </div>
+                <button type="submit">Create Account!</button>
+            </form>
+            <p>Already have an account? <a href="#" target="_blank">Login</a> instead!</p>
+        </div>
     </div>
 </body>
 
