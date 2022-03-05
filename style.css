@@ -17,7 +17,6 @@ body {
 }
 
 .parent-flex-container {
-    overflow-x: hidden;
     display: flex;
     flex-wrap: wrap;
     min-height: 100vh;
@@ -41,6 +40,7 @@ body {
 .title {
     font-family: 'Proza Libre', sans-serif;
     font-weight: bolder;
+    align-self: center;
 }
 
 .img-credits {
@@ -79,6 +79,7 @@ input {
 }
 
 button {
+    display: inline-block;
     width: 250px;
     font-family: inherit;
     font-weight: 900;
@@ -105,4 +106,15 @@ button:active,
 a:hover,
 a:visited {
     color: var(--hover-colors);
+}
+
+@media (max-width: 500px) {
+    .form-container {
+        width: 100%;
+        padding: 3.5vh 3vw;
+        text-align: center;
+    }
+    #form {
+        justify-items: center;
+    }
 }
