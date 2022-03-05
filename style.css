@@ -1,6 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Leckerli+One&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Proza+Libre&display=swap');
 * {
     box-sizing: border-box;
+}
+
+:root {
+    --sidebar-basis: 30vw;
+    --hover-colors: #ff445b;
+    --button-colors: #44b8ff;
 }
 
 body {
@@ -10,35 +17,92 @@ body {
 }
 
 .parent-flex-container {
+    overflow-x: hidden;
     display: flex;
     flex-wrap: wrap;
-    /* gap: 0 40px; */
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
 }
 
 .sidebar-container {
-    background: url("form_images/desktop_img.png") no-repeat center center;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    background: linear-gradient(rgba(40, 40, 40, 0.65), rgba(40, 40, 40, 0.65)), url("form_images/desktop_img.png") no-repeat center center;
     background-size: cover;
-    flex: 1 1 30vw;
+    flex: 1 1 var(--sidebar-basis);
+}
+
+.title,
+.img-credits {
+    color: #fff;
+}
+
+.title {
+    font-family: 'Proza Libre', sans-serif;
+    font-weight: bolder;
+}
+
+.img-credits {
+    align-self: flex-end;
+    font-size: 12px;
 }
 
 .form-container {
-    /* padding: 0 40px; */
-    flex: 1 1 70vw;
+    background-color: #131313;
+    color: #dedede;
+    padding: 3.5vh 6vw;
+    flex: 1 1 calc(100vw - var(--sidebar-basis));
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.form-info {
+    font-size: 22px;
 }
 
 #form {
     display: grid;
     grid-template-columns: repeat(auto-fill, 350px);
-    gap: 32px;
+    gap: 40px;
 }
 
 label {
     display: block;
+    font-size: 16px;
 }
 
 input {
     padding: 4px 0;
     width: 250px;
+}
+
+button {
+    width: 250px;
+    font-family: inherit;
+    font-weight: 900;
+    font-size: 18px;
+    background-color: inherit;
+    color: var(--button-colors);
+    padding: 8px;
+    border: 2px solid var(--button-colors);
+    border-radius: 4px;
+}
+
+a {
+    color: var(--button-colors);
+}
+
+button:hover,
+button:active,
+input:user-invalid {
+    border: 2px solid var(--hover-colors);
+}
+
+button:hover,
+button:active,
+a:hover,
+a:visited {
+    color: var(--hover-colors);
 }
