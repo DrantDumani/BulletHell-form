@@ -21,35 +21,43 @@
                 <div>
                     <label for="first-name">FIRST NAME</label>
                     <input name="first-name" id="first-name" required>
+                    <p class="validation-text hidden">*First name is required</p>
                 </div>
 
                 <div>
                     <label for="last-name">LAST NAME</label>
                     <input name="last-name" id="last-name" required>
+                    <p class="validation-text hidden">*Last name is required</p>
                 </div>
 
                 <div>
                     <label for="email">EMAIL</label>
                     <input type="email" name="email" id="email" placeholder="JohnSmith@line.com" required>
+                    <p class="validation-text hidden">*Please enter a valid email</p>
                 </div>
 
                 <div>
                     <label for="phone-num">PHONE NUMBER</label>
-                    <input name="phone-num" id="phone-num" placeholder="123-456-7890" pattern="\d{3}-\d{3}-\d{4}" title="Format must match ###-###-####">
+                    <input type="tel" name="phone-num" id="phone-num" placeholder="1234567890" pattern="\d{10}" title="Valid phone number is 10 digits">
+                    <p class="validation-text hidden">*Valid phone number is 10 digits</p>
                 </div>
 
                 <div>
                     <label for="password">PASSWORD</label>
-                    <input type="password" id="password" pattern=".*[\W_]+.*[\d]+.*|.*[\d]+.*[\W_]+.*" title="Password must be at least 6 characters long, and must contain at least one special character(+=?./\*_) and one number(0-9)" required>
+                    <input type="password" id="password" pattern="^(?=.*?[\W_])(?=.*?\d).{6,}$" title="Password must be at least 6 characters long, and must contain at least one special character(+=?./\*_) and one number(0-9)" required>
+                    <p class="validation-text hidden">*Password must be at least 6 characters long</p>
+                    <p class="validation-text hidden">*Password must contain a number</p>
+                    <p class="validation-text hidden">*Password must contain one special character (?!+=()|)</p>
                 </div>
 
                 <div>
                     <label for="confirm-password">CONFIRM PASSWORD</label>
-                    <input type="password" id="confirm-password" name="password" required>
+                    <input type="password" id="confirm-password" name="password" title="Passwords must match" required>
+                    <p class="validation-text hidden">*Passwords do not match.</p>
                 </div>
                 <button class="submit-btn" type="submit">Create Account!</button>
             </form>
-            <p>Already have an account? <a href="#" target="_blank">Login</a> instead!</p>
+            <p>Already have an account? <button class="modal-btn">Login</button> instead!</p>
         </div>
     </div>
 </body>

@@ -74,38 +74,53 @@ label {
 }
 
 input {
+    /* display: block; */
     padding: 4px 0;
     width: 250px;
 }
 
-button {
-    display: inline-block;
+.validation-text {
+    color: #f00;
+    margin: 0;
+    font-style: italic;
+    font-size: 12px;
+}
+
+.submit-btn,
+.modal-btn {
+    font-family: inherit;
+    color: var(--button-colors);
+    background-color: inherit;
+}
+
+.submit-btn {
     width: 250px;
     font-family: inherit;
     font-weight: 900;
     font-size: 18px;
-    background-color: inherit;
-    color: var(--button-colors);
     padding: 8px;
     border: 2px solid var(--button-colors);
     border-radius: 4px;
 }
 
-a {
-    color: var(--button-colors);
+.modal-btn {
+    font-size: 1rem;
+    border: none;
 }
 
-button:hover,
-button:active,
-input:user-invalid {
+.submit-btn:hover,
+.submit-btn:active,
+input:not(:placeholder-shown):invalid {
     border: 2px solid var(--hover-colors);
 }
 
 button:hover,
-button:active,
-a:hover,
-a:visited {
+button:active {
     color: var(--hover-colors);
+}
+
+.hidden {
+    display: none;
 }
 
 @media (max-width: 500px) {
