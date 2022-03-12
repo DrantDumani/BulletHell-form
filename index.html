@@ -20,13 +20,13 @@
             <form action="#" method="post" id="form">
                 <div>
                     <label for="first-name">FIRST NAME</label>
-                    <input name="first-name" id="first-name" required>
+                    <input name="first-name" id="first-name" placeholder="John" required>
                     <p class="validation-text hidden">*First name is required</p>
                 </div>
 
                 <div>
                     <label for="last-name">LAST NAME</label>
-                    <input name="last-name" id="last-name" required>
+                    <input name="last-name" id="last-name" placeholder="Smith" required>
                     <p class="validation-text hidden">*Last name is required</p>
                 </div>
 
@@ -45,9 +45,9 @@
                 <div>
                     <label for="password">PASSWORD</label>
                     <input type="password" id="password" pattern="^(?=.*?[\W_])(?=.*?\d).{6,}$" title="Password must be at least 6 characters long, and must contain at least one special character(+=?./\*_) and one number(0-9)" required>
-                    <p class="validation-text hidden">*Password must be at least 6 characters long</p>
-                    <p class="validation-text hidden">*Password must contain a number</p>
-                    <p class="validation-text hidden">*Password must contain one special character (?!+=()|)</p>
+                    <p class="validation-text hidden" id="length">*Password must be at least 6 characters long</p>
+                    <p class="validation-text hidden" id="number">*Password must contain a number</p>
+                    <p class="validation-text hidden" id="special">*Password must contain one special character (?!+=()|)</p>
                 </div>
 
                 <div>
@@ -60,6 +60,7 @@
             <p>Already have an account? <button class="modal-btn">Login</button> instead!</p>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 
 </html>

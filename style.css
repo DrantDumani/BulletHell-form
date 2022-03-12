@@ -114,6 +114,10 @@ input:not(:placeholder-shown):invalid {
     border: 2px solid var(--hover-colors);
 }
 
+input:valid {
+    border: 2px solid #8eff6a
+}
+
 button:hover,
 button:active {
     color: var(--hover-colors);
