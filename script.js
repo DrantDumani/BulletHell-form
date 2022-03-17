@@ -4,6 +4,9 @@ const nonPasswordInput = Array.from(document.querySelectorAll("input")).filter(
 
 let passwordInput = document.querySelector("#password")
 let confirmPassInput = document.querySelector("#confirm-password")
+let modalBtn = document.querySelector(".modal-btn")
+let closeModalBtn = document.querySelector(".close-modal")
+let modal = document.querySelector(".modal-container")
 
 let lengthExpr = /^.{6,}$/
 let numExpr = /\d/
@@ -86,3 +89,15 @@ for (let elem of nonPasswordInput) {
         }
     })
 }
+
+function toggleModal() {
+    modal.classList.toggle("modal-hidden")
+}
+
+modalBtn.addEventListener("click", (e) => {
+    toggleModal()
+})
+
+closeModalBtn.addEventListener("click", (e) => {
+    toggleModal()
+})

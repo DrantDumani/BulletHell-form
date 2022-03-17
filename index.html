@@ -17,7 +17,7 @@
         </div>
         <div class="form-container">
             <h2 class="form-info">This isn't a real form at all. But if it was, it would be telling you to sign up for bullet hell classes! Become better at bullet hells! And learn how to design and create your own!</h2>
-            <form action="#" method="post" id="form">
+            <form action="#" method="post" class="form">
                 <div>
                     <label for="first-name">FIRST NAME</label>
                     <input name="first-name" id="first-name" placeholder="John" required>
@@ -58,6 +58,24 @@
                 <button class="submit-btn" type="submit">Create Account!</button>
             </form>
             <p>Already have an account? <button class="modal-btn">Login</button> instead!</p>
+        </div>
+    </div>
+    <div class="modal-container modal-hidden">
+        <div class="modal-content">
+            <button class="close-modal">X</button>
+            <form action="#" method="post" class="form">
+                <div>
+                    <label for="login-email">EMAIL</label>
+                    <input type="email" name="email" id="login-email" required>
+                </div>
+
+                <div>
+                    <label for="login-password">PASSWORD</label>
+                    <input type="password" id="login-password" required>
+                </div>
+
+                <button class="submit-btn" type="submit">Login!</button>
+            </form>
         </div>
     </div>
     <script src="script.js"></script>
